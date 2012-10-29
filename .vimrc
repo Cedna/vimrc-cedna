@@ -36,7 +36,7 @@ set hidden
 set wildmenu
 set wildmode=list:longest
 set visualbell
-set cursorline
+" set cursorline
 set ttyfast
 set ruler
 set backspace=indent,eol,start
@@ -51,9 +51,8 @@ set winheight=5
 set winminheight=5
 set winheight=999
 
-colorscheme solarized
-set background=light " or dark
-set t_Co=256
+" colorscheme solarized
+" set t_Co=256
 
 set splitbelow splitright
 
@@ -69,6 +68,7 @@ set expandtab
 set nowrap
 set textwidth=79
 set formatoptions=n
+" set background=dark
 
 " check to make sure vim has been compiled with colorcolumn support
 " before enabling it
@@ -89,7 +89,7 @@ set statusline+=\ %{fugitive#statusline()}
 " encoding
 set statusline+=\ [%{strlen(&fenc)?&fenc:&enc}]
 " rvm
-set statusline+=\ %{rvm#statusline()}
+" set statusline+=\ %{rvm#statusline()}
 " line x of y
 set statusline+=\ [line\ %l\/%L]
 
@@ -129,20 +129,21 @@ imap <C-l> <ESC>$
 " Turn off arrow keys (this might not be a good idea for beginners, but it is
 " the best way to ween yourself of arrow keys on to hjkl)
 " http://yehudakatz.com/2010/07/29/everyone-who-tried-to-convince-me-to-use-vim-was-wrong/
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>"
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+" nnoremap <Left> :echoe "Use h"<CR>
+" nnoremap <Right> :echoe "Use l"<CR>
+" nnoremap <Up> :echoe "Use k"<CR>
+"nnoremap <Down> :echoe "Use j"<CR>"
+" inoremap <up> <nop>
+" inoremap <down> <nop>
+" inoremap <left> <nop>
+" inoremap <right> <nop>
 
-nnoremap j gj
-nnoremap k gk
+" nnoremap j gj
+" nnoremap k gk
+
 
 " Map ESC
-imap jj <ESC>
+" imap jj <ESC>
 
 " ACK
 set grepprg=ack
