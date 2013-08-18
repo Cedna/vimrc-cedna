@@ -72,9 +72,9 @@ set formatoptions=n
 
 " check to make sure vim has been compiled with colorcolumn support
 " before enabling it
-if exists("+colorcolumn")
-  set colorcolumn=80
-endif
+"if exists("+colorcolumn")
+"  set colorcolumn=80
+"endif
 
 "  ---------------------------------------------------------------------------
 "  Status Line
@@ -133,10 +133,10 @@ imap <C-l> <ESC>$
 " nnoremap <Right> :echoe "Use l"<CR>
 " nnoremap <Up> :echoe "Use k"<CR>
 "nnoremap <Down> :echoe "Use j"<CR>"
-" inoremap <up> <nop>
-" inoremap <down> <nop>
-" inoremap <left> <nop>
-" inoremap <right> <nop>
+noremap ; l
+noremap l k
+noremap k j
+noremap j h
 
 " nnoremap j gj
 " nnoremap k gk
@@ -342,17 +342,17 @@ au BufRead,BufNewFile *.scss set filetype=scss
 "  GUI
 "  ---------------------------------------------------------------------------
 
-if has("gui_running")
-  set guioptions-=T " no toolbar set guioptions-=m " no menus
-  set guioptions-=r " no scrollbar on the right
-  set guioptions-=R " no scrollbar on the right
-  set guioptions-=l " no scrollbar on the left
-  set guioptions-=b " no scrollbar on the bottom
-  set guioptions=aiA 
-  set mouse=v
-  set guifont=Monaco:h12 "<- Maybe a good idea when using mac
-endif
-set guifont=Monaco:h12
+"if has("gui_running")
+"  set guioptions-=T " no toolbar set guioptions-=m " no menus
+"  set guioptions-=r " no scrollbar on the right
+"  set guioptions-=R " no scrollbar on the right
+"  set guioptions-=l " no scrollbar on the left
+"  set guioptions-=b " no scrollbar on the bottom
+"  set guioptions=aiA 
+"  set mouse=v
+"  set guifont=Monaco:h12 "<- Maybe a good idea when using mac
+"endif
+"set guifont=Monaco:h12
 
 "  ---------------------------------------------------------------------------
 "  Directories
