@@ -342,17 +342,11 @@ au BufRead,BufNewFile *.scss set filetype=scss
 "  GUI
 "  ---------------------------------------------------------------------------
 
-"if has("gui_running")
-"  set guioptions-=T " no toolbar set guioptions-=m " no menus
-"  set guioptions-=r " no scrollbar on the right
-"  set guioptions-=R " no scrollbar on the right
-"  set guioptions-=l " no scrollbar on the left
-"  set guioptions-=b " no scrollbar on the bottom
-"  set guioptions=aiA 
-"  set mouse=v
-"  set guifont=Monaco:h12 "<- Maybe a good idea when using mac
-"endif
-"set guifont=Monaco:h12
+if has('gui_running')
+  set guifont=Monospace\ 12
+  colorscheme slate
+
+endif
 
 "  ---------------------------------------------------------------------------
 "  Directories
