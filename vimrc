@@ -27,7 +27,7 @@ set autoread
 
 set title
 set encoding=utf-8
-set scrolloff=3
+set scrolloff=15
 set autoindent
 set smartindent
 set showmode
@@ -36,13 +36,12 @@ set hidden
 set wildmenu
 set wildmode=list:longest
 set visualbell
-" set cursorline
 set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set number
-set relativenumber
+" set relativenumber
 set undofile
 
 " Auto adjust window sizes when they become current
@@ -55,6 +54,11 @@ set winheight=999
 " set t_Co=256
 
 set splitbelow splitright
+
+"  --------------------------------------------------------------------------
+"  Highlight current line
+"  --------------------------------------------------------------------------
+set cursorline
 
 "  ---------------------------------------------------------------------------
 "  Text Formatting
@@ -344,7 +348,14 @@ au BufRead,BufNewFile *.scss set filetype=scss
 
 if has('gui_running')
   set guifont=Monospace\ 12
+  set guioptions-=r
+  set guioptions-=R
+  set guioptions-=l
+  set guioptions-=b
+  set mouse=v
   colorscheme slate
+  
+  hi CursorLine guibg=black
 
 endif
 
